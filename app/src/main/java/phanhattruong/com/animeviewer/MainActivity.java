@@ -12,6 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import phanhattruong.com.animeviewer.NewEp_Content.Tab_NewEp;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void LoadViewPage(ViewPager vp) {
         SectionPageAdapter section = new SectionPageAdapter(getSupportFragmentManager());
-        section.AddFragment(new Tab_NewEp(), "New Episode");
+        section.AddFragment(new Tab_NewEp(this), "New Episode");
         section.AddFragment(new Tab_Rating(), "Top View");
 
         vp.setAdapter(section);
